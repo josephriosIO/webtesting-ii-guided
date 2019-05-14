@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
+import Players from "./Players";
 import "./App.css";
 
 function App() {
   const [greeting, setGreeting] = useState("");
+  const [players, setPlayers] = useState([{ id: 1, name: "dude" }]);
 
   const greet = () => {
     setGreeting("hello web 18");
@@ -23,6 +25,7 @@ function App() {
         </a>
         <button onClick={greet}>greet</button>
         <h4>{greeting}</h4>
+        <Players players={players} />
       </header>
     </div>
   );
